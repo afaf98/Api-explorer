@@ -3,6 +3,7 @@ function getUrl() {
     fecthApi(document.getElementById("apiUrl").value);
   });
 }
+
 getUrl();
 
 async function fecthApi(url) {
@@ -32,7 +33,11 @@ function displayFailure(response) {
   displayResult(response, "Something went wrong!");
 }
 
+function clearScreen() {
+  document.getElementById("success").innerText = "";
+}
 function displayResult(response, message) {
+  clearScreen();
   const result = document
     .createElement("h1")
     .appendChild(document.createTextNode(` ${message} ${response.status}`));
@@ -44,7 +49,18 @@ function createHistoryCard(url, status) {
     .querySelector("#cardHistoryTemplate")
     .content.cloneNode(true);
   const urlHistory = document.createTextNode(`Response : ${status} ${url}`);
-  newCardItem.querySelector("div").appendChild(urlHistory);
+  newCardItem.querySelector("li").appendChild(urlHistory);
+  newCardItem
+    .querySelector("button.historyButton")
+    .addEventListener("click", function () {
+      fecthApi(url);
+
+      console.log("heyyyy", this);
+      this.parentElement.remove();
+    });
+
+  // console.log("boh", newCardItem);
+  // searchFromHistory(url, newCardItem);
   return newCardItem;
 }
 
@@ -65,3 +81,16 @@ function clearHistory() {
 }
 
 addClearHistoryEventListener();
+
+// `blog-post[id="${post.id}"] > button`;
+
+function searchFromHistory(url, historyCard) {
+  const buttons = document.querySelectorAl(``);
+  console.log("button", buttons, url, historyCard);
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log("hey", buttons);
+    });
+  });
+}
+searchFromHistory();

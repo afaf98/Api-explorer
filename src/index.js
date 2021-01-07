@@ -1,4 +1,5 @@
 import _ from "lodash";
+import "../style.css";
 
 function getUrl() {
   document.getElementById("explore").addEventListener("click", () => {

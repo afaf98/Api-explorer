@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vanilla Javascript</title>
+
+    <template id="cardHistoryTemplate">
+      <li class="historyCard">
+        <button class="historyButton">Search</button>
+      </li>
+    </template>
+  </head>
+  <body>
+    <h1>API-EXPLORER</h1>
+    <div>
+      <input type="text" id="apiUrl" /> <button id="explore">Explore!</button>
+    </div>
+    <div>
+      <h2>History</h2>
+      <div id="history"><div id="allHistory"></div></div>
+      <button id="clearHistory">Clear History</button>
+    </div>
+    <div id="success"></div>
+    <pre id="api"></pre>
+  </body>
+  <script src="main.js"></script>
+</html>

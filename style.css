@@ -2,6 +2,16 @@ body {
   color: green;
 }
 
+.background_red {
+  background-color: rgb(211, 203, 203);
+  color: red;
+  width: 100%;
+}
+.background_green {
+  background-color: transparent;
+  color: green;
+}
+
 /* SCREEN DIVIDES IN TWO SECTIONS HISTORY AND DISPLAY API */
 .api_explorer {
   display: flex;
@@ -68,6 +78,7 @@ body {
 
 .each_history {
   height: 100%;
+  width: 100%;
   font-size: 25px;
   border: 1px solid grey;
   border-radius: 2px;
@@ -123,10 +134,10 @@ body {
   margin: 0;
 }
 
-* {
-  border: 1px solid red;
-}
-
+/* * { */
+/* border: 1px solid red; */
+/* } */
+/*  */
 .api_render_section {
   display: flex;
   justify-content: center;

@@ -30,6 +30,7 @@ async function displaySuccess(response) {
 function displayData(data) {
   const oneResult = document.createTextNode(JSON.stringify(data, null, 4));
   document.getElementById("api").appendChild(oneResult);
+  document.getElementById("api").style.color = "black";
 }
 
 function displayFailure(response) {
@@ -38,13 +39,20 @@ function displayFailure(response) {
 
 function clearScreen() {
   document.getElementById("success").innerText = "";
+  document.getElementById("api").innerText = "";
 }
+
 function displayResult(response, message) {
   clearScreen();
   const result = document
     .createElement("h1")
     .appendChild(document.createTextNode(` ${message} ${response.status}`));
   document.getElementById("success").appendChild(result);
+  if (response.status === 200) {
+    document.getElementById("success").style.color = "green";
+  } else {
+    document.getElementById("success").style.color = "red";
+  }
 }
 
 function createHistoryCard(url, status) {
@@ -53,6 +61,11 @@ function createHistoryCard(url, status) {
     .content.cloneNode(true);
   const urlHistory = document.createTextNode(`Response : ${status} ${url}`);
   newCardItem.querySelector("li").appendChild(urlHistory);
+  if (status === 200) {
+    newCardItem.querySelector("li").classList.add("background_green");
+  } else {
+    newCardItem.querySelector("li").classList.add("background_red");
+  }
   newCardItem
     .querySelector("button.historyButton")
     .addEventListener("click", function () {
@@ -84,16 +97,3 @@ function clearHistory() {
 }
 
 addClearHistoryEventListener();
-
-// `blog-post[id="${post.id}"] > button`;
-
-function searchFromHistory(url, historyCard) {
-  const buttons = document.querySelectorAl(``);
-  console.log("button", buttons, url, historyCard);
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      console.log("hey", buttons);
-    });
-  });
-}
-searchFromHistory();

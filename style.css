@@ -6,10 +6,14 @@ body {
 .api_explorer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
   width: 50%;
   height: 100%;
-  border: 1px solid blue;
+  /* border-left: 1px solid blue; */
 }
+
 .history {
   display: flex;
   flex-direction: column;
@@ -17,14 +21,15 @@ body {
   align-items: center;
   width: 50%;
   height: 100%;
-  border: 1px solid blue;
+  /* border-right: 1px solid blue; */
 }
+
 .column {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 /* SETTING STYLE HISTORY SECTION */
@@ -33,24 +38,117 @@ body {
   width: 100%;
   padding: 3px;
   border: 5px;
-  background-color: rgb(0, 153, 255);
+  background-color: rgb(162, 218, 255);
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 32px;
-  color: black;
+  color: rgba(0, 0, 0, 0.657);
+  text-align: center;
 }
 
 .history_button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 200px;
   height: 50px;
   background-color: transparent;
   border-radius: 5px;
   border: 1px solid grey;
   font-weight: bold;
   text-align: center;
+  font-size: 15px;
   margin-top: 2rem;
+  background-color: rgb(255, 59, 59);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.each_history {
+  height: 100%;
+  font-size: 25px;
+  border: 1px solid grey;
+  border-radius: 2px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.each_history button {
+  height: 4vh;
+  background-color: rgb(129, 202, 250);
+  border: 1px solid grey;
+  border-radius: 2px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+}
 /* API EXPLORER STYLE SECTION */
+
+.explore_container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 0;
+  width: 100%;
+}
+
+.api_explorer_title {
+  color: rgba(0, 0, 0, 0.657);
+  font-size: 45px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+.url_input {
+  border-radius: 3px;
+  border: 1px solid gray;
+  width: 27vw;
+  height: 35px;
+  margin: 0;
+}
+
+.explore_button {
+  text-align: center;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  height: 40px;
+  width: 20%;
+  margin: 0;
+}
+
+* {
+  border: 1px solid red;
+}
+
+.api_render_section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 3px;
+  width: 100%;
+}
+.response_message {
+  width: 100%;
+  height: 5vh;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.display_api {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}

@@ -16,17 +16,19 @@
     <div class="column">
       <div class="history">
         <h2 class="history_title">History</h2>
-        <div id="history"><div id="allHistory"></div></div>
+        <div id="history"><div id="allHistory" class="each_history"></div></div>
         <button id="clearHistory" class="history_button">Clear History</button>
       </div>
       <div class="api_explorer">
-        <h1>API-EXPLORER</h1>
-        <div>
-          <input type="text" id="apiUrl" />
-          <button id="explore">Explore!</button>
+        <h1 class="api_explorer_title">API-EXPLORER</h1>
+        <div class="explore_container">
+          <input type="text" id="apiUrl" class="url_input" />
+          <button id="explore" class="explore_button">Explore!</button>
         </div>
-        <div id="success"></div>
-        <pre id="api"></pre>
+        <div class="api_render_section">
+          <div id="success" class="response_message"></div>
+          <pre id="api" class="display_api"></pre>
+        </div>
       </div>
     </div>
   </body>
